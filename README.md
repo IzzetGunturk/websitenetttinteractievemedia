@@ -7,16 +7,16 @@ This is my internship assignment, where I programmed a new website for Nettt Int
 - Statamic CMS
 - HTML 
 - PHP 
-- TailwindCSS 
+- Tailwind CSS 
 - Vanilla JavaScript 
 - Alpine.js
 
 ## Installation instructions
 
 1. Download Laragon and put the file in the 'www' folder.
-2. run `composer install`
-3. run `php please make:user`
-4. run `npm i` && `npm run dev`
+2. Run `composer install`
+3. Run `php please make:user`
+4. Run `npm i` && `npm run dev`
 
 ## Environment file contents
 
