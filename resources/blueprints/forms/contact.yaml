@@ -1,0 +1,72 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: name
+        field:
+          display: Naam
+          type: text
+          validate: required
+          localizable: true
+          width: 50
+          instructions_position: above
+          listable: hidden
+          visibility: visible
+          always_save: false
+          input_type: text
+          antlers: false
+      -
+        handle: bedrijfsnaam
+        field:
+          input_type: text
+          antlers: false
+          display: Bedrijfsnaam
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: telefoon
+        field:
+          input_type: text
+          antlers: false
+          display: Telefoon
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          validate:
+            - required
+      -
+        handle: email
+        field:
+          display: E-mail
+          type: text
+          validate: required|email
+          localizable: true
+          width: 50
+          instructions_position: above
+          listable: hidden
+          visibility: visible
+          always_save: false
+          input_type: text
+          antlers: false
+      -
+        handle: message_body
+        field:
+          display: Bericht
+          type: textarea
+          validate: required
+          localizable: true
+          instructions_position: above
+          listable: hidden
+          visibility: visible
+          always_save: false
+          antlers: false

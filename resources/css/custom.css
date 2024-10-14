@@ -1,0 +1,118 @@
+/* If you don't want to use the JS in CSS syntax from `tailwind.config.site.js` you can add your own custom CSS here. Use different layers to make sure your CSS either get's purged or not: https://tailwindcss.com/docs/functions-and-directives#layer. CSS in the base layer won't get purged. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@layer base {}
+
+@layer components {
+
+    #image {
+        border-radius: 150px 0 0 0;
+    }
+
+    /* animate on scroll */
+
+    .animated {
+        transition: .4s;
+        opacity: 0;
+    }
+
+    .fade-up {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+
+    .fade-down {
+        -webkit-transform: translateY(-100px);
+        transform: translateY(-100px);
+    }
+
+    .fade-left {
+        -webkit-transform: translateX(-100px);
+        transform: translateX(-100px);
+    }
+
+    .fade-right {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+    }
+
+    .visible {
+        opacity: 1;
+        -webkit-transform: translate(0px);
+        transform: translate(0px);
+    }
+
+    .delay-100 {
+        transition-delay: .1s;
+    }
+
+    .delay-200 {
+        transition-delay: .2s;
+    }
+
+    .delay-300 {
+        transition-delay: .3s;
+    }
+
+    .delay-400 {
+        transition-delay: .4s;
+    }
+
+    .delay-500 {
+        transition-delay: .5s;
+    }
+
+    .delay-600 {
+        transition-delay: .6s;
+    }
+
+    .delay-700 {
+        transition-delay: .7s;
+    }
+
+    .delay-800 {
+        transition-delay: .8s;
+    }
+
+    .delay-900 {
+        transition-delay: .9s;
+    }
+
+    .delay-1000 {
+        transition-delay: 1s;
+    }
+
+    /* filter */
+
+    .alleProjecten {
+        float: left;
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .btn.active {
+        background-color: #E70082;
+        color: #fff;
+    }
+
+    .btn {
+        background-color: #3C4A67;
+        color: #fff;
+    }
+
+}
+
+.cls-1 {
+    fill: none;
+    stroke: #DADADA;
+    stroke-width: 8px;
+    stroke-dasharray: 32 16;
+    fill-rule: evenodd;
+}
+
+
+@layer utilities {}

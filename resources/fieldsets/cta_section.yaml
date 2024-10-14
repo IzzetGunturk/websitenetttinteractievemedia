@@ -1,0 +1,37 @@
+title: CTA-sectie
+fields:
+  -
+    handle: description
+    field:
+      antlers: false
+      display: Beschrijving
+      type: textarea
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    handle: buttontitle
+    field:
+      input_type: text
+      antlers: false
+      display: 'Button titel'
+      type: text
+      icon: text
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    handle: buttonlink
+    field:
+      display: 'Button link'
+      type: link
+      icon: link
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false

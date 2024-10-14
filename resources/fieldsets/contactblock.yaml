@@ -1,0 +1,76 @@
+title: 'Contact blok'
+fields:
+  -
+    handle: image
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      display: Afbeelding
+      type: assets
+      icon: assets
+      instructions: 'Afbeeldingen in WebP uploaden'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      display: Titel
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    handle: address
+    field:
+      input_type: text
+      antlers: false
+      display: Adres
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    handle: postalcode
+    field:
+      input_type: text
+      antlers: false
+      display: Postcode
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    handle: buttontitle
+    field:
+      input_type: text
+      antlers: false
+      display: 'Button titel'
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    handle: buttonlink
+    field:
+      display: 'Button link'
+      type: link
+      icon: link
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false

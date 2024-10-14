@@ -1,0 +1,39 @@
+{{#
+@name overlayblock2
+@desc The overlayblock2 page builder block.
+@set page.page_builder.overlayblock2
+#}}
+
+<!-- /page_builder/_overlayblock2.antlers.html -->
+<section class="pt-16">
+<div class="overflow-hidden bg-primary sm:grid sm:grid-cols-2">
+    <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+        <div class="fluid-container mx-auto max-w-xl text-left animated fade-up delay-400">
+            <h2 class="text-2xl font-bold text-Poppins text-white md:text-3xl">
+                {{aanpaktitle}}
+            </h2>
+
+            <p class="text-white text-Inter mt-5">
+                {{description}}
+            </p>
+
+            <a href="{{buttonlink}}"
+                class="text-primary hover:text-white animate-mover mt-10 md:mt-8 font-Poppins inline-flex bg-white hover:bg-secondary fill-primary hover:fill-white transition duration-200 rounded-md text-sm px-4 py-3 mx-auto mr-2 mb-2">
+                {{buttontitle}}
+                <svg class="w-2.5 h-4 mt-0.5 ml-1" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512">
+                    <path
+                        d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    {{image}}
+    <img class="h-[208px] w-[970px] object-cover bg-center sm:h-full" src="{{url}}" alt="{{alt}}" width="970" height="208"
+        id="image" />
+    {{/image}}
+</div>
+</section>
+
+<!-- End: /page_builder/_overlayblock2.antlers.html -->

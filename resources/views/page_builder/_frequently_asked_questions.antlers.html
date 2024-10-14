@@ -1,0 +1,42 @@
+{{#
+@name frequently_asked_questions
+@desc The frequently_asked_questions page builder block.
+@set page.page_builder.frequently_asked_questions
+#}}
+
+<!-- /page_builder/_frequently_asked_questions.antlers.html -->
+<section class="fluid-container pt-16 animated fade-up delay-400 {{ if center == true }} text-left sm:text-center {{/if}}">
+
+    <h2 class="text-3xl lg:text-4xl font-Poppins font-bold text-secondary tracking-tight">{{titleblue}} <span
+            class="text-primary">{{titlepink}}</span>
+    </h2>
+
+    {{if titledescription != ""}}
+    <p class="mt-2 font-Inter text-base text-tertiary">{{titledescription}}</p>
+    {{/if}}
+    
+</section>
+
+<section class="fluid-container pt-2 lg:pt-16 animated fade-up delay-400">
+    {{questions}}
+    <div class="group p-2" x-data="{isOpen : false}">
+        <div class="flex cursor-pointer items-center justify-between rounded-lg bg-secondary p-4"
+            @click.prevent="isOpen = true">
+            <div class="font-Poppins text-sm text-white" x-data="{isOpen == true}">{{question}}</div>
+            <svg :class="{'transform rotate-180' : isOpen == true}"
+                class="ml-1.5 h-5 w-5 flex-shrink-0 transition duration-300 group-open:-rotate-180" width="50"
+                height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M22.793 39.707C24.0137 40.9277 25.9961 40.9277 27.2168 39.707L45.9668 20.957C47.1875 19.7363 47.1875 17.7539 45.9668 16.5332C44.7461 15.3125 42.7637 15.3125 41.543 16.5332L25 33.0762L8.45703 16.543C7.23633 15.3223 5.25391 15.3223 4.0332 16.543C2.8125 17.7637 2.8125 19.7461 4.0332 20.9668L22.7832 39.7168L22.793 39.707Z"
+                    fill="white" />
+            </svg>
+        </div>
+        <div x-show="isOpen" @click.away="isOpen = false"
+            class="mt-4 mb-4 px-4 py-4 font-Inter text-sm text-tertiary bg-cardshover border border-secondary rounded-lg">
+            {{answer}}
+        </div>
+    </div>
+    {{/questions}}
+</section>
+
+<!-- End: /page_builder/_frequently_asked_questions.antlers.html -->

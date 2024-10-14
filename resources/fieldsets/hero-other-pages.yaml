@@ -1,0 +1,18 @@
+title: 'Hero afbeelding klein'
+fields:
+  -
+    handle: heroimage
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      display: 'Hero afbeelding'
+      type: assets
+      icon: assets
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      instructions: 'Afbeeldingen in WebP uploaden 1920 x 462'

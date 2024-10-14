@@ -1,0 +1,127 @@
+title: 'Page builder'
+fields:
+  -
+    handle: page_builder
+    field:
+      type: replicator
+      localizable: true
+      collapse: true
+      listable: false
+      display: 'Page builder'
+      instructions: 'Build your page by using various predefined content models.'
+      sets:
+        form:
+          display: Form
+          instructions: 'Show a form.'
+          fields:
+            -
+              import: form
+        titles-descriptions-h1:
+          display: 'Titel & beschrijving (h1)'
+          fields:
+            -
+              import: titles-descriptions-h1
+        titles-descriptions:
+          display: 'Titels & beschrijvingen (h2)'
+          fields:
+            -
+              import: titles-descriptions
+        heroimage:
+          display: 'Hero afbeelding groot'
+          fields:
+            -
+              import: heroimage
+        hero-other-pages:
+          display: 'Hero afbeelding klein'
+          fields:
+            -
+              import: hero-other-pages
+        techniquecards:
+          display: 'Techniek kaarten'
+          fields:
+            -
+              import: techniquecards
+        cards:
+          display: Kaarten
+          fields:
+            -
+              import: cards
+        slider:
+          display: Slider
+          fields:
+            -
+              import: slider
+        projectsection:
+          display: 'Project sectie'
+          fields:
+            -
+              import: projectsection
+        overlayblock:
+          display: 'Overlay blok'
+          fields:
+            -
+              import: overlayblock
+        overlayblock2:
+          display: 'Overlay blok 2'
+          fields:
+            -
+              import: overlayblock2
+        customer_reviews:
+          display: 'Klanten reviews'
+          fields:
+            -
+              import: customer_reviews
+        cta_section:
+          display: CTA-sectie
+          fields:
+            -
+              import: cta_section
+        image_button:
+          display: 'Afbeelding + Button'
+          fields:
+            -
+              import: image_button
+        imageblock:
+          display: 'Afbeelding blok'
+          fields:
+            -
+              import: imageblock
+        contactblock:
+          display: 'Contact blok'
+          fields:
+            -
+              import: contactblock
+        teamblock:
+          display: 'Team blok'
+          fields:
+            -
+              import: teamblock
+        tekstafbeelding:
+          display: 'Tekst + afbeelding'
+          fields:
+            -
+              import: tekstafbeelding
+        tekstafbeelding-diensten:
+          display: 'Tekst + afbeelding (diensten)'
+          fields:
+            -
+              import: tekstafbeelding-diensten
+        techniquegrid:
+          display: 'Techniek grid'
+          fields:
+            -
+              import: techniquegrid
+        frequently_asked_questions:
+          display: 'Veelgestelde vragenlijst'
+          fields:
+            -
+              import: frequently_asked_questions
+        partners:
+          display: Partners
+          fields:
+            -
+              import: partners
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      previews: true

@@ -1,0 +1,11 @@
+{{#
+    @name Logo
+    @desc The logo component with a `width` attribute.
+#}}
+
+<!-- /components/_logo.antlers.html -->
+<a class="p-2 -m-2 hover:scale-110 motion-safe:transition-transform focus:outline-none focus-visible:ring-2 ring-primary z-30"
+    aria-label="Logo {{ config:app:name }}" href="{{ site:url }}">
+    <img src="/visuals/logo.svg" class="select-none {{ class }}" width="140" height="200" alt="{{ config:app:name }}" />
+</a>
+<!-- End: /components/_logo.antlers.html -->

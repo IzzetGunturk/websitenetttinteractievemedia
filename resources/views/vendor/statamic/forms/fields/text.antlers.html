@@ -1,0 +1,10 @@
+{{# Bind custom error classses when there is a validation error with the field. #}}
+<!-- /vendor/statamic/forms/fields/text.antlers.html -->
+<input
+    class="w-full rounded bg-input border-input motion-safe:transition"
+    :class="{ 'border-red-600 focus-visible:border-red-600': errors.{{ handle }} }" id="{{ handle }}"
+    name="{{ handle }}" type="{{ input_type ?? 'text' }}" placeholder="{{ placeholder }}"
+    :aria-invalid="errors.hasOwnProperty('{{ handle }}')" aria-describedBy="{{ handle }}"
+    {{ if character_limit }}maxlength="{{ character_limit }}" {{ /if }} {{ old ?= 'value="{old}"' }}
+    {{ js_attributes }} />
+<!-- End: /vendor/statamic/forms/fields/text.antlers.html -->

@@ -1,0 +1,27 @@
+{{#
+    @name Projecten index
+    @desc The Projecten index template.
+#}}
+
+<!-- /projecten/index.antlers.html -->
+<main class="outer-grid" id="content">
+    {{ page_builder scope="block" }}
+    {{ partial src="page_builder/{type}" }}
+    {{ /page_builder }}
+
+
+    <div class="fluid-container mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 animated fade-up delay-400">
+        {{ collection:theme_pages}}
+        {{ unless no_results }}
+        {{ else }}
+        <div class="md:col-span-6">
+            {{ trans:strings.no_results }}
+        </div>
+        {{ /unless }}
+        {{ partial:components/pagination class="md:col-span-12" }}
+        {{ /collection:theme_pages }}
+    </div>
+
+    {{partial:components/ctablock}}
+</main>
+<!-- End: /projecten/index.antlers.html -->

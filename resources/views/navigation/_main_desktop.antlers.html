@@ -1,0 +1,73 @@
+{{#
+	@name Main desktop navigation
+	@desc The sites main desktop navigation rendered on each page. It's 2 levels deep by default and uses AlpineJS for interactivity.
+#}}
+
+<!-- /navigation/_main_desktop.antlers.html -->
+<nav class="hidden md:block" aria-label="{{ trans:strings.main_navigation }}">
+    <ul class="flex items-center space-x-8">
+        {{ nav:main max_depth="2" include_home="false" select="title|url" }}
+        <li {{ if children }} x-data="{ subnavOpen: false }" @keyup.escape.stop.prevent="subnavOpen = false"
+            @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)" x-cloak {{ /if }}
+            class="relative leading-none">
+            <a class="
+                        p-1 -m-1 flex items-center font-bold text-md hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
+                        {{ is_current || is_parent
+                            ? 'text-primary'
+                            : 'text-neutral' }}
+                    " {{ if children }} href="#" @click.prevent="subnavOpen = !subnavOpen" :aria-label="subnavOpen
+                            ? '{{ trans:strings.subnav_close }}'
+                            : '{{ trans:strings.subnav_open }}'" :aria-expanded="subnavOpen" {{ else }}
+                href="{{ url }}" {{ /if }}>
+                {{ title }}
+                {{ if children }}
+                <svg class="w-2 ml-1 overflow-visible stroke-current text-neutral" :class="{ 'rotate-180': subnavOpen }"
+                    aria-hidden="true" stroke-width="16" viewBox="0 0 140 140">
+                    <path d="M135.625 42.648l-62.533 62.527a4.37 4.37 0 01-6.184 0L4.375 42.648" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round" /></svg>
+                {{ /if }}
+            </a>
+            {{ if children }}
+            <ul x-show="subnavOpen" x-ref="subnav"
+                class="absolute right-0 mt-2 -ml-3 py-2 px-3 bg-white border border-neutral/10 rounded shadow"
+                @click.outside="subnavOpen = false" x-transition>
+                {{ children }}
+                <li class="">
+                    <a class="
+                                        whitespace-nowrap py-2 px-1 -mx-1 block text-xs font-bold hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
+                                        {{ is_current || is_parent
+                                            ? 'text-primary'
+                                            : 'text-neutral' }}
+                                    " href="{{ url }}">
+                        {{ title }}
+                    </a>
+                </li>
+                {{ /children }}
+            </ul>
+            {{ /if }}
+        </li>
+        {{ /nav:main }}
+        <li>
+            <a href="/contact" style="border-radius: 10px;"
+                class="relative inline-flex items-center py-5 pl-4 pr-12 overflow-hidden font-semibold transition-all duration-200 ease-in-out rounded hover:pl-10 hover:pr-6 hover:opacity-75 bg-primary group sm:w-28 h-10">
+                <span
+                    class="absolute bottom-0 left-0 w-full h-1 transition-all duration-200 ease-in-out bg-indigo-600 group-hover:h-full"></span>
+                <span class="absolute right-0 pr-2 duration-200 ease-out group-hover:translate-x-12">
+                    <svg class="w-4 h-4 mb-0.2 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <path fill="white"
+                            d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                        </svg>
+                </span>
+                <span class="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+                    <svg class="w-4 h-4 mb-0.2 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <path fill="white"
+                            d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                        </svg>
+                </span>
+                <span
+                    class="relative w-full text-left font-bold text-md text-white transition-colors duration-200 ease-in-out group-hover:text-white">Contact</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+<!-- End: /navigation/_main_desktop.antlers.html -->

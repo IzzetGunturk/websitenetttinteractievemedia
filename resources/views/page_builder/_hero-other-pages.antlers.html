@@ -1,0 +1,19 @@
+{{#
+@name hero-other-pages
+@desc The hero-other-pages page builder block.
+@set page.page_builder.hero-other-pages
+#}}
+
+<!-- /page_builder/_hero-other-pages.antlers.html -->
+{{heroimage}}
+<section class="relative bg-center bg-cover lg:bg-auto lg:bg-right-top bg-no-repeat w-full h-60 2xl:h-72"
+    style="background-image: url({{url}}); clip-path: polygon( 0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw) );" alt="{{alt}}">
+    {{/heroimage}}
+
+    <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/75 to-primary/60"></div>
+</section>
+
+<section class="fluid-container">
+{{ partial:navigation/breadcrumbs }}
+</section>
+<!-- End: /page_builder/_hero-other-pages.antlers.html -->

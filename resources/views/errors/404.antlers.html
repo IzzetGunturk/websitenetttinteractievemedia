@@ -1,0 +1,32 @@
+{{#
+    @name Error: 404
+    @desc The 404 error template.
+#}}
+
+{{# Redirect if current_url is in the Redirects global. #}}
+{{ redirects:redirects | where('url_old', {current_uri}) }}
+{{ if internal_url }}
+{{ redirect :to="internal_url:url" response="{response}" }}
+{{ elseif external_url }}
+{{ redirect :to="external_url" response="{response}" }}
+{{ /if }}
+{{ /redirects:redirects }}
+
+<!-- /errors/404.antlers.html -->
+<main class="outer-grid" id="content">
+    {{ page_builder scope="block" }}
+    {{ partial src="page_builder/{type}" }}
+    {{ /page_builder }}
+</main>
+
+<section class="fluid-container relative md:bottom-16 pb-12 animated fade-up delay-300">
+    <a href="{{site:url}}"
+        class="text-white animate-mover hover:text-white mt-5 font-Poppins inline-flex bg-primary hover:bg-secondary fill-white hover:fill-white transition duration-200 rounded-md text-sm px-4 py-3 mx-auto mr-2 mb-2">
+        Terug naar de homepagina
+        <svg class="w-2.5 h-4 mt-0.5 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <path
+                d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+        </svg>
+    </a>
+</section>
+<!-- End: /errors/404.antlers.html -->

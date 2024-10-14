@@ -1,0 +1,34 @@
+{{#
+@name tekstafbeelding
+@desc The tekstafbeelding page builder block.
+@set page.page_builder.tekstafbeelding
+#}}
+
+<!-- /page_builder/_tekstafbeelding.antlers.html -->
+<section class="fluid-container pt-16 animated fade-up delay-400">
+    <div class="rounded-3xl mx-auto max-w-screen-xl">
+        <div class="grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-16">
+            <div class="relative h-48 md:pt-10 {{ if imageposition == "right" }} lg:order-last {{ else }} order-first {{/if}} lg:h-full">
+                {{image}}
+                <img src="{{url}}" alt="{{alt}}" class="mx-auto fill-white w-64 lg:w-80" width="100%" height="100%">
+                {{/image}}
+            </div>
+
+            <div class="pb-10 lg:pt-8 text-secondary {{ if imageposition == "right" }} lg:order-first {{ else }} order-last {{/if}}">
+                <h2 class="text-3xl font-Poppins font-bold sm:text-4xl">{{title}}</h2>
+
+                <h3 class="mt-4 font-Inter text-sm text-tertiary">
+                    {{description}}
+                </h3>
+            </div>
+        </div>
+    </div>
+    {{ if dashedline == true }}
+    <div class="animated fade-up delay-400 {{ if imageposition == "left"}} scale-x-[-1] {{/if}}">
+        <svg class="mx-auto lg:w-[600px] w-72" xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" viewBox="350 350 900 500">
+            <path class="cls-1" d="M375.427,268.14S276.188,629.588,753.542,576.6s510.7-5.263,483.708,236.4" />
+        </svg>
+    </div>
+    {{/if}}
+</section>
+<!-- End: /page_builder/_tekstafbeelding.antlers.html -->

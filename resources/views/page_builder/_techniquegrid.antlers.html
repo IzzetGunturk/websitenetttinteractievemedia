@@ -1,0 +1,51 @@
+{{#
+@name techniquegrid
+@desc The techniquegrid page builder block.
+@set page.page_builder.techniquegrid
+#}}
+
+<!-- /page_builder/_techniquegrid.antlers.html -->
+<section class="fluid-container pt-16">
+    <div class="max-w-screen-xl">
+        <div class="max-w-xl">
+            <h1 class="text-lg lg:text-2xl font-bold font-Poppins text-secondary animated fade-up delay-400">
+                {{title_techniques_begin}}
+                <span class="text-primary">{{title_techniques_between}}</span>
+                {{title_techniques_end}}</h1>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
+            {{techniques}}
+            <div class="flex items-start animated fade-up delay-400">
+                <span class="flex-shrink-0 rounded-lg bg-primary shadow-xl border p-4">
+                    <svg class="h-5 w-5 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                            d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                    </svg>
+                </span>
+
+                <div class="ml-4 flex flex-col justify-between h-full">
+                    <div>
+                        <h2 class="text-base font-Poppins text-secondary">{{title}}</h2>
+
+                        <div class="mt-1 text-sm font-Inter text-tertiary">
+                            {{description}}
+                        </div>
+                    </div>
+
+                    <div>
+                        <a href="{{link_field}}"
+                            class="text-primary hover:text-secondary fill-primary hover:fill-secondary lg:mt-2 font-Poppins inline-flex transition duration-200 rounded-md text-sm py-2.5 text-center mb-2">Lees
+                            meer
+                            <svg class="w-2.5 mt-0.2 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                <path
+                                    d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {{/techniques}}
+        </div>
+</section>
+<!-- End: /page_builder/_techniquegrid.antlers.html -->

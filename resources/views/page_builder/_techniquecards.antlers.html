@@ -1,0 +1,55 @@
+{{#
+@name techniquecards
+@desc The techniquecards page builder block.
+@set page.page_builder.techniquecards
+#}}
+
+<!-- /page_builder/_techniquecards.antlers.html -->
+<section class="fluid-container pt-16 animated fade-up delay-400 {{ if center == true }} text-left sm:text-center {{/if}}">
+
+    <h2 class="text-3xl lg:text-4xl font-Poppins font-bold text-secondary tracking-tight">{{titleblue}} <span
+            class="text-primary">{{titlepink}}</span>
+    </h2>
+
+    {{if titledescription != ""}}
+    <p class="mt-2 font-Inter text-base text-tertiary">{{titledescription}}</p>
+    {{/if}}
+    
+</section>
+
+<section class="fluid-container relative">
+    {{ partial:components/anchor id="{{ id }}" }}
+    <div class="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 ">
+        {{cards}}
+        <div class="animated fade-up delay-400">
+            <a class="rounded-xl border flex flex-col justify-between h-full bg-white hover:bg-cardshover duration-200 transition p-8 shadow-xl text-center"
+                href="{{cardlink}}">
+                <div>
+                    {{icon}}
+                    <img class="mx-auto w-28" src="{{url}}" alt="{{alt}}" width="105" height="100">
+                    {{/icon}}
+
+                    <div class="mt-4 text-2xl md:text-lg font-bold text-secondary font-Poppins">{{title}}</div>
+
+                    <div class="mt-2 text-[14px] lg:text-[16px] text-tertiary font-Inter">
+                        {{description}}
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <button type="button"
+                        class="text-white lg:mt-2 font-Poppins inline-flex bg-primary hover:bg-secondary transition duration-200 rounded-md text-xs px-4 py-2.5 text-center mr-2 mb-2">Lees
+                        meer
+                        <svg class="w-2.5 h-4 mt-0.2 ml-1 fill-white" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 384 512">
+                            <path
+                                d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                        </svg>
+                    </button>
+                </div>
+            </a>
+        </div>
+        {{/cards}}
+    </div>
+</section>
+<!-- End: /page_builder/_techniquecards.antlers.html -->

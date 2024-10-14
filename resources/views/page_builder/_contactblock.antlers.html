@@ -1,0 +1,62 @@
+{{#
+@name contactblock
+@desc The contactblock page builder block.
+@set page.page_builder.contactblock
+#}}
+
+<!-- /page_builder/_contactblock.antlers.html -->
+<section class="fluid-container pt-16 relative animated fade-up delay-400">
+    {{ partial:components/anchor id="{{ id }}" }}
+    <div class="flex flex-col lg:flex-row ">
+        {{image}}
+        <img class="w-full h-auto max-w-screen-sm" src="{{url}}" alt="{{alt}}" width="989" height="644">
+        {{/image}}
+
+        <div class="bg-secondary text-white w-full h-auto max-w-[640px] lg:translate-y-[60px] lg:-ml-[60px] py-5">
+            <div class="sm:ml-3 mr-4 mt-6">
+                <div class="px-[1.2rem] sm:pl-[2.3rem] mt-5">
+                    <h2 class="font-Poppins text-2xl text-white">{{title}}</h2>
+                    <h2 class="font-Poppins text-base text-white mt-5">{{address}}</h2>
+                    <h2 class="font-Poppins text-base text-white">{{postalcode}}</h2>
+                    <ul class="mt-2">
+                        <li>
+                            <a href="tel:0475358905"
+                                class="font-Poppins text-base text-white group hover:text-primary transition duration-200 mt-5 inline-flex">
+                                <svg class="w-6 h-6 mr-3 fill-white group-hover:fill-primary transition duration-200 animate-wave"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z" />
+                                </svg>
+                                0475 - 35 89 05
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@nettt.nl"
+                                class="font-Poppins text-base text-white group hover:text-primary transition duration-200 inline-flex">
+                                <svg class="w-6 h-6 mr-3 fill-white group-hover:fill-primary transition duration-200 animate-wave"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                                </svg>
+                                info@nettt.nl
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="font-Inter italic mt-5">
+                        Er is voldoende parkeergelegenheid.
+                    </div>
+
+                    <a href="{{buttonlink}}" target="_blank"
+                        class="text-primary animate-mover hover:text-white mt-8 font-Poppins inline-flex bg-white hover:bg-primary fill-primary hover:fill-white transition duration-200 rounded-md text-sm px-4 py-3 mx-auto mr-2 mb-2">
+                        {{buttontitle}}
+                        <svg class="w-2.5 h-4 mt-0.5 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path
+                                d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End: /page_builder/_contactblock.antlers.html -->

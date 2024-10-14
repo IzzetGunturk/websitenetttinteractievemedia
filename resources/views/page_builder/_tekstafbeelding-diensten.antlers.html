@@ -1,0 +1,36 @@
+{{#
+@name tekstafbeelding-diensten
+@desc The tekstafbeelding-diensten page builder block.
+@set page.page_builder.tekstafbeelding-diensten
+#}}
+
+<!-- /page_builder/_tekstafbeelding-diensten.antlers.html -->
+<section class="fluid-container mt-16 animated fade-up delay-400">
+    <div class="bg-secondary rounded-3xl mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-16">
+            <div class="relative h-44 pt-10 {{ if imageposition == "right" }} lg:order-last {{ else }} order-first {{/if}} lg:h-full">
+                {{icon}}
+               <img src="{{url}}" alt="{{alt}}" class="mx-auto fill-white w-32 lg:w-56" width="312" height="298">
+               {{/icon}}
+            </div>
+
+            <div class="pb-10 lg:pt-16 text-white lg:pl-10 text-center lg:text-left {{ if imageposition == "right" }} lg:order-first {{ else }} order-last {{/if}}"">
+                <h2 class="font-Poppins font-bold text-2xl lg:text-4xl">{{title}}</h2>
+
+                <p class="mt-1 lg:mt-4 font-Inter text-sm">
+                    {{description}}
+                </p>
+
+                <a href="{{buttonlink}}"
+                    class="text-primary animate-mover hover:text-white mt-7 md:mt-5 font-Poppins inline-flex bg-white hover:bg-primary fill-primary hover:fill-white transition duration-200 rounded-md text-sm px-4 py-3 mx-auto mr-2 mb-2">
+                    {{buttontitle}}
+                    <svg class="w-2.5 h-4 mt-0.5 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <path
+                            d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End: /page_builder/_tekstafbeelding-diensten.antlers.html -->

@@ -1,0 +1,82 @@
+{{#
+@name projectsection
+@desc The projectsection page builder block.
+@set page.page_builder.projectsection
+#}}
+
+<!-- /page_builder/_projectsection.antlers.html -->
+<section class="fluid-container pt-16 animated fade-up delay-400 {{ if center == true }} text-left sm:text-center {{/if}}">
+
+    <h2 class="text-3xl lg:text-4xl font-Poppins font-bold text-secondary tracking-tight">{{titleblue}} <span
+            class="text-primary">{{titlepink}}</span>
+    </h2>
+    {{if titledescription != ""}}
+    <p class="mt-2 font-Inter text-base text-tertiary">{{titledescription}}</p>
+    {{/if}}
+    
+</section>
+
+<section class="fluid-container pt-2">
+    <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+        {{ collection:projecten sort="order" paginate="false" limit="3" as="items" }}
+        {{ unless no_results }}
+        {{ items }}
+        <div class="overflow-hidden rounded-lg bg-white shadow-xl animated fade-up delay-400">
+            <div class="flex flex-col justify-between h-full">
+                <div>
+                
+                    {{ partial:components/picture :image="project_image" aspect_ratio="6/3" class="object-cover" }}
+
+                    <div class="text-lg font-Poppins text-gray-900 pl-4 pt-4 sm:pt-6">
+                        {{project_title}}
+                    </div>
+
+                    <div class="pl-4 pt-2">
+                        {{tags}}
+                        <a href="{{tag_links}}"
+                            class="inline-flex items-center space-x-1 px-2 text-[13px] font-Inter text-black hover:text-primary transition duration-200 rounded-full bg-gray-200 text-sm mr-1 mb-1">{{title}}
+                            <div class="w-2 h-2 mt-[1px] ml-1 rounded-full bg-white"></div>
+                        </a>
+                        {{/tags}}
+                    </div>
+                </div>
+
+                <div class="pl-4 mt-2 mb-2">
+                    <a href="{{project_link}}"
+                        class="text-primary hover:text-secondary fill-primary hover:fill-secondary lg:mt-2 font-Poppins inline-flex transition duration-200 rounded-md text-sm py-2.5 text-center mb-2">
+                        Bekijk project
+                        <svg class="w-2.5 mt-0.2 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path
+                                d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{ /items }}
+        {{ else }}
+        <div class="md:col-span-6">
+            {{ trans:strings.no_results }}
+        </div>
+        {{ /unless }}
+        {{ partial:components/pagination class="md:col-span-12" }}
+        {{ /collection:projecten }}
+    </div>
+</section>
+
+<section class="fluid-container mx-auto text-center pt-16 animated fade-up delay-400">
+    <a href="{{buttonlink}}"
+        class="text-white animate-mover lg:mt-2 font-Poppins inline-flex bg-primary hover:bg-secondary transition duration-200 rounded-md text-sm px-4 py-3 mx-auto mr-2 mb-2">
+        {{if buttontitle }}
+        {{ buttontitle }}
+        {{else}}
+        Bekijk onze projecten
+        {{/if}}
+        <svg class="w-2.5 h-4 mt-0.5 ml-1 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <path
+                d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+        </svg>
+    </a>
+</section>
+<!-- End: /page_builder/_projectsection.antlers.html -->

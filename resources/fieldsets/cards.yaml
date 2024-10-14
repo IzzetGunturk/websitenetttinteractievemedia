@@ -1,0 +1,53 @@
+title: Kaarten
+fields:
+  -
+    handle: cards
+    field:
+      fields:
+        -
+          handle: icon
+          field:
+            mode: list
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            display: Icoon
+            type: assets
+            icon: assets
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            always_save: false
+            container: assets
+        -
+          handle: title
+          field:
+            input_type: text
+            antlers: false
+            display: Titel
+            type: text
+            icon: text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            always_save: false
+        -
+          handle: description
+          field:
+            antlers: false
+            display: Beschrijving
+            type: textarea
+            icon: textarea
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            always_save: false
+      mode: stacked
+      reorderable: true
+      display: Kaarten
+      type: grid
+      icon: grid
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false

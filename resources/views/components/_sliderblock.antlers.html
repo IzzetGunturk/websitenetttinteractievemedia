@@ -1,0 +1,27 @@
+<section class="fluid-container pt-16 animated fade-up delay-400">
+    <div class="mx-auto">
+        <div class="customer-logos slide p-3">
+            {{ slider_logos }}
+            <div class="slide">
+                <a href="{{link_logos}}" class="flex h-full justify-center flex-col align-center p-3" target="_blank">
+                    {{logos}}
+                    <img src="{{url}}" alt="{{alt}}" width="100%" height="100%"
+                        class="grayscale hover:grayscale-0 transition duration-200 mx-auto">
+                    {{/logos}}
+                </a>
+            </div>
+            {{/slider_logos}}
+        </div>
+    </div>
+</section>
+
+<style>
+    .slick-track {
+        display: flex !important;
+    }
+
+    .slick-slide {
+        height: auto;
+    }
+
+</style>

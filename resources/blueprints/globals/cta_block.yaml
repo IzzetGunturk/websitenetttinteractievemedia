@@ -1,0 +1,37 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: description
+        field:
+          antlers: false
+          display: Beschrijving
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: button_text
+        field:
+          input_type: text
+          antlers: false
+          display: 'Button tekst'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: button_link
+        field:
+          display: 'Button link'
+          type: link
+          icon: link
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false

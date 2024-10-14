@@ -1,0 +1,53 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        import: page_builder
+  seo:
+    display: SEO
+    fields:
+      -
+        import: seo
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: meta
+        field:
+          display: Meta
+          type: section
+          icon: section
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - theme_pages
+          max_items: 1
+          listable: hidden
+          localizable: true
+          mode: default
+          create: true
+          display: Parent
+          icon: entries
+          instructions_position: above
+          visibility: visible
+          always_save: false
+title: "Thema pagina's"

@@ -1,0 +1,110 @@
+title: 'Techniek grid'
+fields:
+  -
+    handle: title_techniques_begin
+    field:
+      input_type: text
+      antlers: false
+      display: 'Titel technieken begin'
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    handle: title_techniques_between
+    field:
+      input_type: text
+      antlers: false
+      display: 'Titel technieken tussen'
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    handle: title_techniques_end
+    field:
+      input_type: text
+      antlers: false
+      display: 'Titel technieken einde'
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    handle: techniques
+    field:
+      fields:
+        -
+          handle: title
+          field:
+            input_type: text
+            antlers: false
+            display: Titel
+            type: text
+            icon: text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            always_save: false
+        -
+          handle: description
+          field:
+            collapse: false
+            always_show_set_button: false
+            previews: true
+            buttons:
+              - h2
+              - h3
+              - bold
+              - italic
+              - unorderedlist
+              - orderedlist
+              - removeformat
+              - quote
+              - anchor
+              - image
+              - table
+            save_html: false
+            toolbar_mode: fixed
+            link_noopener: false
+            link_noreferrer: false
+            target_blank: false
+            reading_time: false
+            fullscreen: true
+            allow_source: true
+            enable_input_rules: true
+            enable_paste_rules: true
+            antlers: false
+            remove_empty_nodes: false
+            display: Beschrijving
+            type: bard
+            icon: bard
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            always_save: false
+        -
+          handle: link_field
+          field:
+            display: Link
+            type: link
+            icon: link
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            always_save: false
+      mode: stacked
+      reorderable: true
+      display: Technieken
+      type: grid
+      icon: grid
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
